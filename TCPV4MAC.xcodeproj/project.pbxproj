@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25DC6FBB5A32429A83FE014F /* TCPV4MACApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3012932D61355CE4A11F5 /* TCPV4MACApp.swift */; };
+		2CF28771DA7F7AE1C6D94515 /* ProcessDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7DA8C9F96010291C05BC02 /* ProcessDetails.swift */; };
+		38B4581E9E4E540403C08740 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760480881B268EBE018B2D9 /* DashboardView.swift */; };
+		460FDA6FC437A7EA986CA825 /* ProcessEnricher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BB95ACCA7563F3B9C3D2A7 /* ProcessEnricher.swift */; };
+		49BAB159B59EBB6BCAB85C87 /* Uninstaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60FA7A1AACD727C5AAAE19A /* Uninstaller.swift */; };
+		4ABE2A605494BBC27F26EFBB /* Connection+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441AA8A10199428FDD758812 /* Connection+Display.swift */; };
+		6A8EAD5694FFBA060DEB0934 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63468F65DF06BB0D1DBDB618 /* AppSettings.swift */; };
+		72296C679B315E4F422C580F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D58130CE7181FC24B3E2FE /* ContentView.swift */; };
+		78DE750CA04BB9ECA716601D /* ConnectionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F76FE85B4E0B84EF5038DE /* ConnectionFilter.swift */; };
+		79BAC9C47DB594B6F95F8249 /* SudoRelaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE24ACEEC0922F1258ABE78 /* SudoRelaunch.swift */; };
+		8BD5B7FB802A58B4C575CF2F /* TerminalApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF344DE96FEED11AD18524A9 /* TerminalApps.swift */; };
+		8FC9560D4C0E0C5C023E7275 /* RowColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E68492C32C0DC435B0A66 /* RowColor.swift */; };
+		954F8DB563BF57695240DDE2 /* InspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDD67DFA36FEE33B870684 /* InspectorView.swift */; };
+		9A77815242CE26358AD2C810 /* ConnectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590AC4CE12CB02CB5B61ECE7 /* ConnectionsViewModel.swift */; };
+		9B1B720FBB79DE213169069E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA45D269DF0489B26ECA3B5 /* Assets.xcassets */; };
+		B9107F328D750C9AF4EDA8A8 /* SingleInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B19DC76DC8DEB8AB3255C0F /* SingleInstance.swift */; };
+		DC0A42595315E700D121198E /* TCPV4MACCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7DB936005778804551F410EE /* TCPV4MACCore */; };
+		E75EDA439872BC79E56AAAE1 /* ConnectionsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6246612C819F0E9CAB441C42 /* ConnectionsTable.swift */; };
+		F0C5AF499A80E515AA51A961 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0DCB8C9FC97F93A5DD36D8 /* SettingsView.swift */; };
+		FBE447FC44B2F63D32FD5FAC /* AdminPasswordSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2A00C082E16AD2B014E750 /* AdminPasswordSheet.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39D58130CE7181FC24B3E2FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		441AA8A10199428FDD758812 /* Connection+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Connection+Display.swift"; sourceTree = "<group>"; };
+		4A7DA8C9F96010291C05BC02 /* ProcessDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessDetails.swift; sourceTree = "<group>"; };
+		528F80C70E42B478BDEE1D78 /* TCPV4MAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPV4MAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		590AC4CE12CB02CB5B61ECE7 /* ConnectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsViewModel.swift; sourceTree = "<group>"; };
+		61BDD67DFA36FEE33B870684 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
+		6246612C819F0E9CAB441C42 /* ConnectionsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsTable.swift; sourceTree = "<group>"; };
+		63468F65DF06BB0D1DBDB618 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		7B19DC76DC8DEB8AB3255C0F /* SingleInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInstance.swift; sourceTree = "<group>"; };
+		8760480881B268EBE018B2D9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		91C3012932D61355CE4A11F5 /* TCPV4MACApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPV4MACApp.swift; sourceTree = "<group>"; };
+		9DA45D269DF0489B26ECA3B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC2A00C082E16AD2B014E750 /* AdminPasswordSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPasswordSheet.swift; sourceTree = "<group>"; };
+		C3387316461DB53A3F1EB4C6 /* TCPV4MACCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TCPV4MACCore; path = TCPV4MACCore; sourceTree = SOURCE_ROOT; };
+		CF344DE96FEED11AD18524A9 /* TerminalApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalApps.swift; sourceTree = "<group>"; };
+		D06E68492C32C0DC435B0A66 /* RowColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowColor.swift; sourceTree = "<group>"; };
+		D6F76FE85B4E0B84EF5038DE /* ConnectionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionFilter.swift; sourceTree = "<group>"; };
+		DAE24ACEEC0922F1258ABE78 /* SudoRelaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudoRelaunch.swift; sourceTree = "<group>"; };
+		E3BB95ACCA7563F3B9C3D2A7 /* ProcessEnricher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessEnricher.swift; sourceTree = "<group>"; };
+		F60FA7A1AACD727C5AAAE19A /* Uninstaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uninstaller.swift; sourceTree = "<group>"; };
+		FC0DCB8C9FC97F93A5DD36D8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DCC3D92E41273F937F48AA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0A42595315E700D121198E /* TCPV4MACCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E31D98BCDDD5F5C7A9B6EFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528F80C70E42B478BDEE1D78 /* TCPV4MAC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73E8057D15332BF0BEC83404 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BC2A00C082E16AD2B014E750 /* AdminPasswordSheet.swift */,
+				63468F65DF06BB0D1DBDB618 /* AppSettings.swift */,
+				441AA8A10199428FDD758812 /* Connection+Display.swift */,
+				D6F76FE85B4E0B84EF5038DE /* ConnectionFilter.swift */,
+				6246612C819F0E9CAB441C42 /* ConnectionsTable.swift */,
+				590AC4CE12CB02CB5B61ECE7 /* ConnectionsViewModel.swift */,
+				39D58130CE7181FC24B3E2FE /* ContentView.swift */,
+				8760480881B268EBE018B2D9 /* DashboardView.swift */,
+				61BDD67DFA36FEE33B870684 /* InspectorView.swift */,
+				4A7DA8C9F96010291C05BC02 /* ProcessDetails.swift */,
+				E3BB95ACCA7563F3B9C3D2A7 /* ProcessEnricher.swift */,
+				D06E68492C32C0DC435B0A66 /* RowColor.swift */,
+				FC0DCB8C9FC97F93A5DD36D8 /* SettingsView.swift */,
+				7B19DC76DC8DEB8AB3255C0F /* SingleInstance.swift */,
+				DAE24ACEEC0922F1258ABE78 /* SudoRelaunch.swift */,
+				91C3012932D61355CE4A11F5 /* TCPV4MACApp.swift */,
+				CF344DE96FEED11AD18524A9 /* TerminalApps.swift */,
+				F60FA7A1AACD727C5AAAE19A /* Uninstaller.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BCA826C674BA3D6FB3437759 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9DA45D269DF0489B26ECA3B5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF80EFD22B3D72C2C12015AD /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C3387316461DB53A3F1EB4C6 /* TCPV4MACCore */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		D92F2CDE6DBEBCB71BB24E7A = {
+			isa = PBXGroup;
+			children = (
+				DB37287C08B47DF4149C7171 /* App */,
+				BF80EFD22B3D72C2C12015AD /* Packages */,
+				2E31D98BCDDD5F5C7A9B6EFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB37287C08B47DF4149C7171 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BCA826C674BA3D6FB3437759 /* Resources */,
+				73E8057D15332BF0BEC83404 /* Sources */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0632C4E886BE29DF143EF945 /* TCPV4MAC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23B4431D415D9233C4F8C313 /* Build configuration list for PBXNativeTarget "TCPV4MAC" */;
+			buildPhases = (
+				09B269A5AA130DE2FE4E9C0B /* Sources */,
+				F6D75D8DA00712763C29091B /* Resources */,
+				7DCC3D92E41273F937F48AA9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCPV4MAC;
+			packageProductDependencies = (
+				7DB936005778804551F410EE /* TCPV4MACCore */,
+			);
+			productName = TCPV4MAC;
+			productReference = 528F80C70E42B478BDEE1D78 /* TCPV4MAC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97F267EDF0D6179D3D5A37F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0632C4E886BE29DF143EF945 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 60F34F63A5071216DA3CCAAE /* Build configuration list for PBXProject "TCPV4MAC" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D92F2CDE6DBEBCB71BB24E7A;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F43C911068303A0E19661601 /* XCLocalSwiftPackageReference "TCPV4MACCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2E31D98BCDDD5F5C7A9B6EFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0632C4E886BE29DF143EF945 /* TCPV4MAC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6D75D8DA00712763C29091B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B1B720FBB79DE213169069E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09B269A5AA130DE2FE4E9C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE447FC44B2F63D32FD5FAC /* AdminPasswordSheet.swift in Sources */,
+				6A8EAD5694FFBA060DEB0934 /* AppSettings.swift in Sources */,
+				4ABE2A605494BBC27F26EFBB /* Connection+Display.swift in Sources */,
+				78DE750CA04BB9ECA716601D /* ConnectionFilter.swift in Sources */,
+				E75EDA439872BC79E56AAAE1 /* ConnectionsTable.swift in Sources */,
+				9A77815242CE26358AD2C810 /* ConnectionsViewModel.swift in Sources */,
+				72296C679B315E4F422C580F /* ContentView.swift in Sources */,
+				38B4581E9E4E540403C08740 /* DashboardView.swift in Sources */,
+				954F8DB563BF57695240DDE2 /* InspectorView.swift in Sources */,
+				2CF28771DA7F7AE1C6D94515 /* ProcessDetails.swift in Sources */,
+				460FDA6FC437A7EA986CA825 /* ProcessEnricher.swift in Sources */,
+				8FC9560D4C0E0C5C023E7275 /* RowColor.swift in Sources */,
+				F0C5AF499A80E515AA51A961 /* SettingsView.swift in Sources */,
+				B9107F328D750C9AF4EDA8A8 /* SingleInstance.swift in Sources */,
+				79BAC9C47DB594B6F95F8249 /* SudoRelaunch.swift in Sources */,
+				25DC6FBB5A32429A83FE014F /* TCPV4MACApp.swift in Sources */,
+				8BD5B7FB802A58B4C575CF2F /* TerminalApps.swift in Sources */,
+				49BAB159B59EBB6BCAB85C87 /* Uninstaller.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1284C3826B3861C58CA25897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2E6139E39DD57BA3D559CDE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		685817FABD8E7F64B3945C1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (C) 2026 Jensy Leonardo Martínez Cruz — GNU GPL v3.0";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jensyleo.tcpv4mac;
+				PRODUCT_NAME = TCPV4MAC;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		CD8E37FD4B734831E1116D44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (C) 2026 Jensy Leonardo Martínez Cruz — GNU GPL v3.0";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jensyleo.tcpv4mac;
+				PRODUCT_NAME = TCPV4MAC;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23B4431D415D9233C4F8C313 /* Build configuration list for PBXNativeTarget "TCPV4MAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				685817FABD8E7F64B3945C1A /* Debug */,
+				CD8E37FD4B734831E1116D44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		60F34F63A5071216DA3CCAAE /* Build configuration list for PBXProject "TCPV4MAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E6139E39DD57BA3D559CDE8 /* Debug */,
+				1284C3826B3861C58CA25897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		F43C911068303A0E19661601 /* XCLocalSwiftPackageReference "TCPV4MACCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = TCPV4MACCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7DB936005778804551F410EE /* TCPV4MACCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TCPV4MACCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 97F267EDF0D6179D3D5A37F9 /* Project object */;
+}
