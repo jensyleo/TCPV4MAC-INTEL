@@ -28,7 +28,7 @@ import Darwin
 struct TCPV4MACApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     // Shared so both the main window and the Settings window use one instance.
-    @State private var model = ConnectionsViewModel()
+    @StateObject private var model = ConnectionsViewModel()
     @AppStorage("showInspector") private var showInspector = true
 
     init() {

@@ -126,7 +126,7 @@ struct AdminPasswordSheet: View {
             switch outcome {
             case .success:
                 password = ""
-                SudoRelaunch.quitWhenRootUp()
+                await SudoRelaunch.quitWhenRootUp()
                 dismiss()
             case .wrongPassword:
                 password = ""

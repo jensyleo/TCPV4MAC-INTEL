@@ -27,7 +27,7 @@ import Darwin
 #endif
 
 struct ContentView: View {
-    @Bindable var model: ConnectionsViewModel
+    @ObservedObject var model: ConnectionsViewModel
     @State private var selection = Set<Connection.ID>()
     @State private var showLegend = false
     @State private var showAdminSheet = false
@@ -53,7 +53,7 @@ struct ContentView: View {
                 // no misleading "No connections") until the first snapshot lands.
                 Color.clear
             } else if let error = model.lastError {
-                ContentUnavailableView {
+                CompatUnavailableView {
                     Label("Couldn't read connections", systemImage: "exclamationmark.triangle")
                 } description: {
                     Text(error)
@@ -61,7 +61,7 @@ struct ContentView: View {
                     Button("Retry") { model.refreshNow() }
                 }
             } else if !model.searchText.isEmpty || model.filter.isActive {
-                ContentUnavailableView {
+                CompatUnavailableView {
                     Label("No matching connections", systemImage: "line.3.horizontal.decrease.circle")
                 } description: {
                     Text("Nothing matches the current search or filters.")
@@ -69,7 +69,7 @@ struct ContentView: View {
                     Button("Clear filters & search") { clearFiltersAndSearch() }
                 }
             } else {
-                ContentUnavailableView("No connections", systemImage: "network.slash")
+                CompatUnavailableView("No connections", systemImage: "network.slash")
             }
         }
     }
@@ -85,30 +85,36 @@ struct ContentView: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
-            if let error = model.lastError {
-                Label(error, systemImage: "exclamationmark.triangle.fill")
-                    .foregroundStyle(.orange)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(6)
-                    .background(.orange.opacity(0.12))
-            }
+        HStack(spacing: 0) {
+            VStack(spacing: 0) {
+                if let error = model.lastError {
+                    Label(error, systemImage: "exclamationmark.triangle.fill")
+                        .foregroundStyle(.orange)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(6)
+                        .background(.orange.opacity(0.12))
+                }
 
-            DashboardView(model: model)
-            Divider()
-            ConnectionsTable(model: model, rows: rows, selection: $selection,
-                             resetToken: resetToken, showIcons: showProcessIcons)
-                .overlay { emptyState }
-            Divider()
-            statusBar
-        }
-        .inspector(isPresented: $showInspector) {
-            InspectorView(details: model.selectedDetails)
+                DashboardView(model: model)
+                Divider()
+                ConnectionsTable(model: model, rows: rows, selection: $selection,
+                                 resetToken: resetToken, showIcons: showProcessIcons)
+                    .overlay { emptyState }
+                Divider()
+                statusBar
+            }
+            .frame(maxWidth: .infinity)
+
+            if showInspector {
+                Divider()
+                InspectorView(details: model.selectedDetails)
+                    .frame(width: 280)
+            }
         }
         .sheet(isPresented: $showAdminSheet) { AdminPasswordSheet() }
         .preferredColorScheme(AppAppearance(rawValue: appearance)?.colorScheme)
         .onExitCommand { clearFiltersAndSearch() }
-        .onChange(of: selection) { _, newValue in model.setSelection(newValue) }
+        .onChange(of: selection) { newValue in model.setSelection(newValue) }
         .searchable(text: $model.searchText, placement: .toolbar, prompt: "Search process, IP, port, PID…")
         .toolbar {
             ToolbarItemGroup {

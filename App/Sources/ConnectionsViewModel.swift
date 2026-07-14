@@ -19,27 +19,26 @@
 //
 
 import AppKit
+import Combine
 import Foundation
-import Observation
 import TCPV4MACCore
 
 /// MVVM view model: subscribes to the core `RefreshEngine` and republishes the
 /// current connection snapshot for SwiftUI. UI-facing only — all data work lives
 /// in `TCPV4MACCore`.
 @MainActor
-@Observable
-final class ConnectionsViewModel {
+final class ConnectionsViewModel: ObservableObject {
 
-    private(set) var connections: [Connection] = []
-    private(set) var lastError: String?
-    private(set) var lastUpdated: Date?
+    @Published private(set) var connections: [Connection] = []
+    @Published private(set) var lastError: String?
+    @Published private(set) var lastUpdated: Date?
     /// Number of refresh ticks this session — a visible proof the interval works.
-    private(set) var refreshCount = 0
+    @Published private(set) var refreshCount = 0
 
     /// IDs to tint as added / modified (row color rules). Kept for a short window
     /// so the flash is visible across several fast refreshes, not just one tick.
-    private(set) var addedIDs: Set<Connection.ID> = []
-    private(set) var modifiedIDs: Set<Connection.ID> = []
+    @Published private(set) var addedIDs: Set<Connection.ID> = []
+    @Published private(set) var modifiedIDs: Set<Connection.ID> = []
     private var addedAt: [Connection.ID: Date] = [:]
     private var modifiedAt: [Connection.ID: Date] = [:]
     private let highlightWindow: TimeInterval = 2.5
@@ -50,7 +49,7 @@ final class ConnectionsViewModel {
 
     private static let intervalKey = "TCPV4MAC.refreshInterval"
 
-    var interval: RefreshInterval {
+    @Published var interval: RefreshInterval {
         didSet {
             let e = engine, i = interval
             Task { await e.setInterval(i) }
@@ -59,16 +58,16 @@ final class ConnectionsViewModel {
     }
 
     /// Free-text search applied to the table (dashboard counts stay on the full set).
-    var searchText: String = ""
+    @Published var searchText: String = ""
 
     /// Toggle-style filters (protocol, IP version, state, loopback). Persisted.
-    var filter = ConnectionFilter() {
+    @Published var filter = ConnectionFilter() {
         didSet { filter.saveToDefaults() }
     }
 
     /// Column ids currently hidden (single source of truth; persisted).
     private static let hiddenColumnsKey = "TCPV4MAC.hiddenColumns"
-    private(set) var hiddenColumns: Set<String> = []
+    @Published private(set) var hiddenColumns: Set<String> = []
 
     func isColumnHidden(_ id: String) -> Bool { hiddenColumns.contains(id) }
 
@@ -82,13 +81,13 @@ final class ConnectionsViewModel {
         UserDefaults.standard.set([String](), forKey: Self.hiddenColumnsKey)
     }
 
-    private(set) var isPaused = false
+    @Published private(set) var isPaused = false
 
     /// Details for the single selected connection (nil when 0 or >1 selected).
-    private(set) var selectedDetails: ProcessDetails?
+    @Published private(set) var selectedDetails: ProcessDetails?
 
     /// Recently-removed connections kept visible (red) for a short window.
-    private(set) var removedIDs: Set<Connection.ID> = []
+    @Published private(set) var removedIDs: Set<Connection.ID> = []
 
     private let engine: RefreshEngine
     private var consumeTask: Task<Void, Never>?
@@ -279,7 +278,7 @@ final class ConnectionsViewModel {
             var results: [String: SignatureInfo] = [:]
             for path in paths { results[path] = ProcessEnricher.computeSignature(path: path) }
             await MainActor.run { [results] in
-                for (path, info) in results { self.signatureCache[path] = info }
+                self.signatureCache.merge(results) { _, new in new }
             }
         }
     }

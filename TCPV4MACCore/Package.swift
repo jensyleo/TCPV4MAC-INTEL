@@ -1,10 +1,10 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
     name: "TCPV4MACCore",
     platforms: [
-        .macOS(.v14)
+        .macOS(.v13)
     ],
     products: [
         .library(name: "TCPV4MACCore", targets: ["TCPV4MACCore"]),
@@ -12,26 +12,17 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "TCPV4MACCore",
-            swiftSettings: [
-                .swiftLanguageMode(.v6)
-            ]
+            name: "TCPV4MACCore"
         ),
         .executableTarget(
             name: "tcpv4mac-cli",
-            dependencies: ["TCPV4MACCore"],
-            swiftSettings: [
-                .swiftLanguageMode(.v6)
-            ]
+            dependencies: ["TCPV4MACCore"]
         ),
         .testTarget(
             name: "TCPV4MACCoreTests",
             dependencies: ["TCPV4MACCore"],
             resources: [
                 .process("Fixtures")
-            ],
-            swiftSettings: [
-                .swiftLanguageMode(.v6)
             ]
         )
     ]

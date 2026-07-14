@@ -23,7 +23,7 @@ import SwiftUI
 /// Top summary cards. The protocol/state cards act as one-click quick filters;
 /// "Total" clears filters + search. Active quick-filters are highlighted.
 struct DashboardView: View {
-    @Bindable var model: ConnectionsViewModel
+    @ObservedObject var model: ConnectionsViewModel
 
     // A card is highlighted when its dimension is narrowing the results and this
     // flag is part of the kept set — so several state cards (e.g. Listening +

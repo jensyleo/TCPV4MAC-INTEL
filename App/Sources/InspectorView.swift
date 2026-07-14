@@ -30,9 +30,9 @@ struct InspectorView: View {
             if let details {
                 content(details)
             } else {
-                ContentUnavailableView("No selection",
-                                       systemImage: "sidebar.right",
-                                       description: Text("Select a single connection to see process details."))
+                CompatUnavailableView("No selection",
+                                      systemImage: "sidebar.right",
+                                      description: Text("Select a single connection to see process details."))
             }
         }
         .frame(minWidth: 260)

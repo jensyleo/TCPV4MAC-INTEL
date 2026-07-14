@@ -24,7 +24,7 @@ import TCPV4MACCore
 /// Preferences window (⌘,). Appearance / icons live in `@AppStorage`; the
 /// refresh interval is owned by the shared view model.
 struct SettingsView: View {
-    @Bindable var model: ConnectionsViewModel
+    @ObservedObject var model: ConnectionsViewModel
     @AppStorage(SettingsKey.appearance) private var appearance = AppAppearance.system.rawValue
     @AppStorage(SettingsKey.showProcessIcons) private var showProcessIcons = true
     @AppStorage(SettingsKey.autoRefreshOnLaunch) private var autoRefreshOnLaunch = true
