@@ -28,9 +28,7 @@ xcuserdata/
 # macOS
 .DS_Store
 
-# Local publish-prep folder (review copies + legal notes — not for the public repo)
+# Not part of this repo
 Publicar GitHub/
-
-# Local-only docs (internal changelog/roadmap) — only README.md is published
 CHANGELOG.md
 ROADMAP.md
