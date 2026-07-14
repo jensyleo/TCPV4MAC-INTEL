@@ -8,9 +8,11 @@ Apple-native technologies.
 > Original work. **Not affiliated with, endorsed by, or derived from** Microsoft
 > or Sysinternals — only inspired by the idea. See [Credits](#credits--inspiration).
 
-> Built and tested on **macOS 26 (Tahoe), Apple Silicon (M-series)**. Minimum
-> deployment target: **macOS 26 (Tahoe)** — the app targets the latest macOS.
-> (The `TCPV4MACCore` engine package itself stays broadly portable.)
+> Compatible with **Intel-based Macs (x86_64)**, as well as Apple Silicon
+> (arm64) — built and tested as a universal binary. Minimum deployment
+> target: **macOS 13 (Ventura)**, chosen specifically so the app keeps
+> running on Intel Macs. (The `TCPV4MACCore` engine package stays broadly
+> portable.)
 
 ## Screenshots
 
