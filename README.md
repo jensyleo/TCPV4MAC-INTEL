@@ -35,8 +35,6 @@ heavier app.
 | SwiftUI + AppKit app (NSTableView, inspector, toolbar, dashboard, filters, colors) | ✅ Done |
 | Context menu, CSV/JSON copy & export, admin mode, settings, uninstaller | ✅ Done |
 
-See the [CHANGELOG](CHANGELOG.md) for the detailed history.
-
 ## Features
 
 - Live list of every TCP/UDP connection with its owning process.
@@ -69,7 +67,7 @@ TCPV4MAC/
   App/Sources/          SwiftUI app (App, ConnectionsViewModel, ContentView)
   project.yml           XcodeGen spec (source of truth for the .xcodeproj)
   TCPV4MAC.xcodeproj Generated project (committed for convenience)
-  README / CHANGELOG / LICENSE
+  README / LICENSE
 ```
 
 ### Why not sandboxed
@@ -98,7 +96,7 @@ xcodebuild -project TCPV4MAC.xcodeproj -scheme TCPV4MAC -configuration Debug bui
 # or just open TCPV4MAC.xcodeproj in Xcode and Run.
 ```
 
-> **v1.0** — the full app. See the [CHANGELOG](CHANGELOG.md) for details.
+> **v1.0** — the full app.
 
 ## Uninstall
 
