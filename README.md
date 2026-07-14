@@ -12,6 +12,15 @@ Apple-native technologies.
 > deployment target: **macOS 26 (Tahoe)** — the app targets the latest macOS.
 > (The `TCPV4MACCore` engine package itself stays broadly portable.)
 
+## Screenshots
+
+| Live table + dashboard | Inspector |
+|---|---|
+| ![Overview](docs/screenshots/overview.png) | ![Inspector](docs/screenshots/inspector.png) |
+
+*Usernames and local IP addresses are blurred for privacy — everything else is
+the real, live UI.*
+
 ---
 
 ## Status

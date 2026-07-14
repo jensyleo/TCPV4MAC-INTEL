@@ -4,6 +4,12 @@ All notable changes to **TCPV4MAC**. Format based on
 [Keep a Changelog](https://keepachangelog.com/); this project follows
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added — 2026-07-13 · README screenshots
+- Added a screenshots section to the README (overview + inspector), with
+  usernames and local IP addresses blurred for privacy.
+
 ## [1.0.0] — 2026-07-02
 
 First release. A complete, lightweight macOS TCP/UDP connection inspector
