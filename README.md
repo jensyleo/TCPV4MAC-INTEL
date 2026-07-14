@@ -1,9 +1,13 @@
-# TCPV4MAC
+# TCPV4MAC-INTEL
 
 A native macOS app that shows a **real-time graphical view of every TCP and UDP
 connection** on the system and the process that owns it — inspired by
 Microsoft Sysinternals' *TCPView*, but built from scratch with modern
 Apple-native technologies.
+
+This repository is the **Intel (x86_64) compatible fork** of
+[TCPV4MAC](https://github.com/jensyleo/TCPV4MAC), whose `main` branch targets
+Apple Silicon only. Both projects share the same author and license.
 
 > Original work. **Not affiliated with, endorsed by, or derived from** Microsoft
 > or Sysinternals — only inspired by the idea. See [Credits](#credits--inspiration).
