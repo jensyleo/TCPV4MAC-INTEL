@@ -162,7 +162,7 @@ final class ConnectionsViewModel: ObservableObject {
     /// Dashboard counts computed in one pass instead of eight separate scans.
     struct Summary {
         var tcp = 0, udp = 0, listening = 0, established = 0
-        var ipv4 = 0, ipv6 = 0, loopback = 0, processes = 0
+        var ipv4 = 0, ipv6 = 0, loopback = 0, external = 0, processes = 0
     }
 
     var summary: Summary {
@@ -172,7 +172,7 @@ final class ConnectionsViewModel: ObservableObject {
         for c in connections {
             if c.protocolType == .tcp { s.tcp += 1 } else { s.udp += 1 }
             if c.isIPv6 { s.ipv6 += 1 } else { s.ipv4 += 1 }
-            if c.isLoopback { s.loopback += 1 }
+            if c.isLoopback { s.loopback += 1 } else { s.external += 1 }
             if c.isListening { s.listening += 1 }
             if c.isEstablished { s.established += 1 }
             pids.insert(c.pid)

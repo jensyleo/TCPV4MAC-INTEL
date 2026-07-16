@@ -37,10 +37,10 @@ struct DashboardView: View {
     private var ipv6Active: Bool { model.filter.ipv6 && ipNarrowing }
     private var listeningActive: Bool { model.filter.listening && stateNarrowing }
     private var establishedActive: Bool { model.filter.established && stateNarrowing }
-    // Scope is loopback vs external; the Loopback card isolates loopback-only,
-    // matching the IPv4/IPv6 switch (its counterpart "External" lives in the menu).
+    // Scope is loopback vs external — same two-way switch as IPv4/IPv6 and TCP/UDP.
     private var scopeNarrowing: Bool { !(model.filter.loopback && model.filter.external) }
     private var loopbackActive: Bool { model.filter.loopback && scopeNarrowing }
+    private var externalActive: Bool { model.filter.external && scopeNarrowing }
 
     var body: some View {
         let s = model.summary   // all counts in a single pass over the snapshot
@@ -55,14 +55,20 @@ struct DashboardView: View {
                 card("UDP", "\(s.udp)", .teal, active: udpActive) { toggleProtocol(tcp: false) }
                 card("Listening", "\(s.listening)", .indigo, active: listeningActive) { toggleState(listening: true) }
                 card("Established", "\(s.established)", .green, active: establishedActive) { toggleState(listening: false) }
-                card("Loopback", "\(s.loopback)", .purple, active: loopbackActive,
-                     hint: "Show only loopback (localhost / 127.0.0.1 / ::1)") {
-                    toggleLoopback()
-                }
                 plainCard("Processes", "\(s.processes)",
                           hint: "Number of distinct processes that currently have connections")
                 plainCard("Refresh", model.interval.displayName,
                           hint: "Auto-refresh interval")
+                // Scope pair kept last and side by side, mirroring the
+                // IPv4/IPv6 and TCP/UDP switches.
+                card("Loopback", "\(s.loopback)", .purple, active: loopbackActive,
+                     hint: "Show only loopback (localhost / 127.0.0.1 / ::1)") {
+                    toggleScope(loopback: true)
+                }
+                card("External", "\(s.external)", .brown, active: externalActive,
+                     hint: "Show only external (non-loopback) connections") {
+                    toggleScope(loopback: false)
+                }
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
@@ -95,13 +101,14 @@ struct DashboardView: View {
         }
     }
 
-    // Loopback card = focus on loopback only; clicking the active card clears
-    // back to all. (The "External" counterpart is available in the filter menu.)
-    private func toggleLoopback() {
-        if loopbackActive {
-            model.filter.loopback = true; model.filter.external = true    // clear → all
+    // Same two-way switch as protocol / IP version: only Loopback and External
+    // exist, so keeping both means "no scope filter".
+    private func toggleScope(loopback isLoopback: Bool) {
+        let alreadyOnly = isLoopback ? loopbackActive : externalActive
+        if alreadyOnly {
+            model.filter.loopback = true; model.filter.external = true         // clear → all
         } else {
-            model.filter.loopback = true; model.filter.external = false   // only loopback
+            model.filter.loopback = isLoopback; model.filter.external = !isLoopback  // isolate / switch
         }
     }
 
