@@ -45,11 +45,13 @@ heavier app.
 
 - Live list of every TCP/UDP connection with its owning process.
 - Near real-time auto-refresh (configurable 500 ms – 10 s).
-- Highlight **new / modified / closed** connections (green / yellow / red).
+- Highlight **new / modified / removed** connections (green / amber / red), plus
+  persistent color cues for unsigned, listening, loopback, and root processes.
 - Single search box across process, PID, IP, port, bundle id, executable, user, state.
 - Filters: TCP/UDP, IPv4/IPv6, listening, established, loopback, etc.
 - Inspector panel with full process detail.
-- Export to CSV / JSON / TXT.
+- Export all connections to a CSV file; copy selected rows as CSV or JSON to
+  the clipboard from the context menu.
 - Designed for future expansion: history (SQLite), stats, alerts, GeoIP, threat intel.
 
 ## Architecture
@@ -72,7 +74,7 @@ TCPV4MAC/
     Tests/                XCTest: parser · diff · repository · refresh engine
   App/Sources/          SwiftUI app (App, ConnectionsViewModel, ContentView)
   project.yml           XcodeGen spec (source of truth for the .xcodeproj)
-  TCPV4MAC.xcodeproj Generated project (committed for convenience)
+  TCPV4MAC.xcodeproj    Generated project (committed for convenience)
   README / LICENSE
 ```
 
@@ -114,10 +116,11 @@ items or launch agents are created, so nothing else is left behind.
 
 ## Roadmap
 
-- **Phase 1 (MVP):** live list, auto-refresh, search, filters, inspector, process icons, CSV export.
+- **Phase 1 (MVP, done):** live list, auto-refresh, search, filters, inspector,
+  process icons, CSV/JSON export, context menu (including kill process).
 - **Phase 2:** history, statistics, charts, alerts, DNS resolution, whois.
 - **Phase 3:** GeoIP, ASN, threat intelligence (VirusTotal / AbuseIPDB / Shodan).
-- **Phase 4:** Endpoint Security integration, bandwidth monitor, kill process, close connection.
+- **Phase 4:** Endpoint Security integration, bandwidth monitor, close individual connections.
 
 ## Credits & inspiration
 
